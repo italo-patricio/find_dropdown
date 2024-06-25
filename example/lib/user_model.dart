@@ -13,7 +13,7 @@ class UserModel {
       id: json["id"],
       createdAt: json["createdAt"] == null ? null : DateTime.parse(json["createdAt"]),
       name: json["name"],
-      avatar: json["avatar"],
+      avatar: "https://picsum.photos/seed/picsum/100/80",
     );
   }
 

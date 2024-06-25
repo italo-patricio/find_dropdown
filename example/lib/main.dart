@@ -138,17 +138,29 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                RaisedButton(
+                ElevatedButton(
                     child: Text('Limpar Países'),
-                    color: Theme.of(context).primaryColor,
-                    textColor: Theme.of(context).primaryIconTheme.color,
-                    onPressed: () => countriesKey.currentState?.clear()),
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStatePropertyAll(Theme.of(context).primaryColor),
+                      textStyle: WidgetStatePropertyAll(TextStyle(
+                        color: Theme.of(context).primaryIconTheme.color,
+                      )),
+                    ),
+                    onPressed: () => {
+                      //TODO IMPLEMENT 
+                    }),
                 SizedBox(width: 25),
-                RaisedButton(
+                ElevatedButton(
                     child: Text('Limpar Nome'),
-                    color: Theme.of(context).primaryColor,
-                    textColor: Theme.of(context).primaryIconTheme.color,
-                    onPressed: () => nameKey.currentState?.clear()),
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStatePropertyAll(Theme.of(context).primaryColor),
+                      textStyle: WidgetStatePropertyAll(TextStyle(
+                        color: Theme.of(context).primaryIconTheme.color,
+                      )),
+                    ),
+                    onPressed: () => {
+                      //TODO IMPLEMENT 
+                    }),
               ],
             ),
           ],
