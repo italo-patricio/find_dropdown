@@ -201,7 +201,7 @@ class FindDropdownState<T> extends State<FindDropdown<T>> {
                     SelectDialog.showModal<T>(
                       context,
                       items: widget.items,
-                      label: widget.label,
+                      label: widget.label != null ? Text(widget.label!) : null,
                       onFind: widget.onFind,
                       multipleSelectedValues: multipleSelectedValues,
                       okButtonBuilder: widget.okButtonBuilder,
@@ -247,7 +247,7 @@ class FindDropdownState<T> extends State<FindDropdown<T>> {
                           height: 40,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(4.0),
+                            borderRadius: BorderRadius.circular(24),
                             border: Border.all(
                                 width: 1,
                                 color: Theme.of(context).dividerColor),
